@@ -5,11 +5,11 @@
 
 ---
 
-### 🚀 Instalación vía pip
+### Instalación vía pip
 
 - La forma recomendada de usar **Aurora CLI Tool** es instalándola directamente desde el repositorio remoto con `pip`.
 
-### ✅ Pasos
+### Pasos
 
 1. **Crear un entorno virtual:**
 
@@ -17,7 +17,7 @@
 
 2. **Instalar la herramienta desde GitHub:**
 
-- pip install git+https://github.com/Oscaridiji/aurora.git
+- pip install git+https://github.com/Oscaridiji/aurora-tool.git    
 
 3. **Ejecutar la CLI:**
 
@@ -25,13 +25,13 @@
 
 ---
 
-## 🛠️ Requisitos y configuración del entorno
+## Requisitos y configuración del entorno
 
 - Python 3.8 o superior.
 - Acceso a AWS mediante un **usuario IAM**.
 - El usuario IAM debe tener permisos definidos en el archivo [`iam_policy.json`](./iam_policy.json) incluido en este proyecto.
 
-### 🔐 Configurar el acceso a AWS
+### Configurar el acceso a AWS
 
 - Antes de usar la herramienta, asegúrate de tener configurado un perfil de AWS con credenciales válidas. Puedes hacerlo ejecutando:
 
@@ -78,7 +78,7 @@ Formato de salida (puedes dejarlo vacío)
 
 ---
 
-## 🗓️ Autoeliminación con etiqueta `auto-delete-after` (propuesta de mejora)
+## Autoeliminación con etiqueta `auto-delete-after` (propuesta de mejora)
 
 Cada cluster clonado con esta herramienta incluye una etiqueta personalizada llamada `auto-delete-after`, con una fecha en formato ISO 8601 (por ejemplo: `2025-03-31T12:00:00Z`).
 
@@ -125,13 +125,25 @@ Otra posible mejora sería añadir un sistema de notificaciones cuando se realiz
 - **Email**: usando Amazon SNS.
 - **Slack**: mediante un [Webhook entrante](https://api.slack.com/messaging/webhooks).
 
+---
 
-## 🧱 Distribución como ejecutable con PyInstaller (opcional)
+## Distribución como ejecutable con PyInstaller (opcional)
 
 Para entornos donde no queremos exponer el código fuente o simplemente queremos facilitar la ejecución de la herramienta sin necesidad de entorno virtual, podemos distribuir Aurora CLI Tool como un binario ejecutable.
 
 Esta opción puede ser útil si, por ejemplo, solo los responsables de infraestructura pueden modificar la lógica y los developers simplemente ejecutan la herramienta.
 
+
+---
+
+## Anonimización de datos (idea de extensión)
+
+Aunque esta herramienta clona la base de datos sin modificar los datos originales, en entornos sensibles se podría añadir una fase opcional de anonimización tras la restauración del cluster.
+
+### Propuesta de implementación (opcional):
+
+- Crear un script SQL o Lambda post-restauración que anonimice ciertas tablas o campos.
+- Esta tarea podría ejecutarse de forma automática una vez que el cluster haya sido clonado.
 
 ---
 
