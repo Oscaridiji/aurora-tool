@@ -1,0 +1,25 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"rds:DescribeDBClusters",
+				"rds:DescribeDBInstances",
+				"rds:RestoreDBClusterToPointInTime",
+				"rds:CreateDBInstance",
+				"rds:DeleteDBCluster",
+				"rds:DeleteDBInstance",
+				"rds:AddTagsToResource",
+				"rds:DescribeOrderableDBInstanceOptions",
+				"rds:ListTagsForResource"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": "sts:GetCallerIdentity",
+			"Resource": "*"
+		}
+	]
+}

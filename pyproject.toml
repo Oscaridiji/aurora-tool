@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+exclude = "/(\\.venv|build|dist|__pycache__|\\.git)/"
+
+[tool.flake8]
+max-line-length = 88
+exclude = [".venv", "build", "dist", "__pycache__"]
+
+[tool.mypy]
+ignore_missing_imports = true

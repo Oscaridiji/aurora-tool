@@ -1,0 +1,5 @@
+boto3>=1.18.0
+questionary>=1.10.0
+python-dotenv>=0.19.2
+pytest>=6.2.5
+flake8>=4.0.1
