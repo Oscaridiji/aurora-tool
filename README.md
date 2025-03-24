@@ -13,15 +13,15 @@
 
 1. **Crear un entorno virtual:**
 
-- python3 -m venv aurora_env
+<pre> python3 -m venv aurora_env </pre>
 
 2. **Instalar la herramienta desde GitHub:**
 
-- pip install git+https://github.com/Oscaridiji/aurora-tool.git    
+<pre> pip install git+https://github.com/Oscaridiji/aurora-tool.git </pre>
 
 3. **Ejecutar la CLI:**
 
-- aurora-tool
+<pre> aurora-tool </pre>
 
 ---
 
@@ -37,7 +37,7 @@
 
 - Ejecuta el comando:
 
-aws configure
+<pre> aws configure </pre>
 
 - Esto solicitará:
 
