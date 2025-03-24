@@ -15,11 +15,21 @@
 
 <pre> python3 -m venv aurora_env </pre>
 
-2. **Instalar la herramienta desde GitHub:**
+2. **Activamos el entorno virtual:**
+
+- En Linux/macOS:
+
+<pre> source aurora_env/bin/activate </pre>
+
+- En Windows:
+
+<pre> .\aurora_env\Scripts\activate </pre>
+
+3. **Instalar la herramienta desde GitHub:**
 
 <pre> pip install git+https://github.com/Oscaridiji/aurora-tool.git </pre>
 
-3. **Ejecutar la CLI:**
+4. **Ejecutar la CLI:**
 
 <pre> aurora-tool </pre>
 
