@@ -157,4 +157,14 @@ Aunque esta herramienta clona la base de datos sin modificar los datos originale
 
 ---
 
+### Nota técnica: credenciales de acceso a los clusters clonados
+
+- Los clusters clonados heredan la configuración del cluster de origen, incluida la cuenta maestra (nombre de usuario y contraseña). Por motivos de seguridad, esta herramienta no gestiona esas credenciales directamente ni las expone en ningún momento.
+
+- Si se desea permitir el acceso a los desarrolladores sin compartir la contraseña del usuario maestro, puede añadirse fácilmente una funcionalidad extra para crear un nuevo usuario con permisos limitados tras el clonado, conectándose al endpoint del cluster una vez esté disponible.
+
+- Esta extensión no se ha implementado en esta versión, al no contar con credenciales reales ni políticas claras de acceso, pero queda documentada como mejora futura.
+
+---
+
 Este proyecto fue desarrollado como parte de una prueba técnica para evaluar la automatización de entornos en AWS con Python.
